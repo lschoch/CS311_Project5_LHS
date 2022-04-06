@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    
+    <title>Craps</title>
+</head>
+<body>
+    <div id="box">
+        <div class="flex-container">
+            <div id="title">
+                <H1>Craps!</H1>
+            </div>
+            <div id="dice" class="flex-item">
+                <img src="img/diceQuestion_transparent.png" id="dieLeft" alt="left die" width="100px" height="100px">&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/diceQuestion_transparent.png" id="dieRight" alt="right die" width="100px" height="100px">
+            </div>
+            <div id="balanceDiv" class="flex-item">
+                <label for="balance">Balance:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="text" id="balance" name="balance"  value="100.00"><br>
+            </div>
+            <div id="betDiv" class="flex-item">
+                <label for="bet">Enter bet:&nbsp;&nbsp; </label>
+                <input type="text" id="bet" name="bet" value="10.00">
+            </div>
+            <div id="rollDiv" class="flex-item">
+                <button id="rollButton">Roll</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div id="resultDiv" class="flex-item">
+                <label for="result">Result:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+                <input type="text" id="result" name="resultt">
+            </div>
+            <div id="bottom">
+                <img src="img/Craps.png" id="craps" alt="craps" width="200px" height="100px">
+            </div>
+        </div>
+    </div>
+    <div id="keeperDiv">
+        <input type="text" id="pointKeeper" name="pointKeeper" value="0">
+    </div>
+    <script type="text/javascript" src="js/index.js"></script> 
+</body>
+</html>
