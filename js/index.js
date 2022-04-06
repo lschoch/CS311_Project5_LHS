@@ -24,8 +24,8 @@ function addBetFocusEvents(){
     bet.addEventListener("focus", () => {
         document.getElementById("box").style.backgroundColor = "#8609f6";
         document.getElementById("craps").src = "img/Craps.png";
-        document.getElementById("dieLeft").src = "img/diceQuestion_transparent.png";
-        document.getElementById("dieRight").src = "img/diceQuestion_transparent.png";
+        document.getElementById("dieLeft").src = "img/Question.png";
+        document.getElementById("dieRight").src = "img/Question.png";
         bet.value = "";
         result.value = "";
         document.getElementById("pointKeeper").value = 0;
