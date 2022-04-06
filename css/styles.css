@@ -3,23 +3,20 @@ body {
     background-color: #09f0f6;
     font-family: Arial, Helvetica, sans-serif;
     color: black;
-    padding: 0px;
+    padding-top: 10px;
 }
-
-/* #f60f09
-#79f609 */
 
 #box {
     display: flex;
     flex-flow: column;
     align-items: center;
     background-color: #8609f6;
-    height: 530px;
+    height: 540px;
     width: 400px;
     border: 2px solid black;
     border-radius: 25px;
     margin: auto;
-   /*  margin-top: 15px; */
+    padding-top: 15px;
 }
 
 .flex-container {
@@ -27,10 +24,6 @@ body {
     flex-flow: column;
     align-items: center;
 }
-
-/* #dieLeft, #dieRight, #betDiv, #resultDiv {
-    padding: 15px;
-} */
 
 .flex-item {
     padding: 10px;
