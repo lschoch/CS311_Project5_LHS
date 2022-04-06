@@ -5,25 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    
     <title>Craps</title>
 </head>
 <body>
     <div id="box">
         <div class="flex-container">
             <div id="title">
-                <H1>Craps!</H1>
+                <H1>Craps</H1>
             </div>
             <div id="dice" class="flex-item">
                 <img src="img/diceQuestion_transparent.png" id="dieLeft" alt="left die" width="100px" height="100px">&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/diceQuestion_transparent.png" id="dieRight" alt="right die" width="100px" height="100px">
             </div>
             <div id="balanceDiv" class="flex-item">
                 <label for="balance">Balance:&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <input type="text" id="balance" name="balance"  value="100.00"><br>
+                <!-- Disable balance text box so the player cannot change it. -->
+                <input type="text" id="balance" name="balance"  value="100.00" disabled><br>
             </div>
             <div id="betDiv" class="flex-item">
                 <label for="bet">Enter bet:&nbsp;&nbsp; </label>
-                <input type="text" id="bet" name="bet" value="10.00">
+                <input type="text" id="bet" name="bet">
             </div>
             <div id="rollDiv" class="flex-item">
                 <button id="rollButton">Roll</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
