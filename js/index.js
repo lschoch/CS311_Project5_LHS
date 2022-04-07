@@ -1,8 +1,14 @@
 addRollButtonEvents();
 addBetFocusEvents();
 
+const balHeader = document.getElementById("balanceHeader");
+const balance = document.getElementById("balance");
+
+// Initialize the balance textbox and heading.
+balance.value = 100.00;
+balHeader.innerHTML = "Balance: " + numToCurrency(balance.value);
+
 function addRollButtonEvents(){
-    const balance = document.getElementById("balance");
     const bet = document.getElementById("bet");
     const rollButton = document.getElementById("rollButton");
     rollButton.addEventListener("click", () => {
@@ -17,7 +23,7 @@ function addRollButtonEvents(){
     });
 }
 
-// reset when the bet entry box gets the focus
+// Reset game box to defaults when the bet entry box gets the focus
 function addBetFocusEvents(){
     const bet = document.getElementById("bet");
     const result = document.getElementById("result");
@@ -35,7 +41,7 @@ function addBetFocusEvents(){
 function calculate_score(){
     let die1 = Math.floor(Math.random() * 6) + 1;
     let die2 = Math.floor(Math.random() * 6) + 1;
-    // "point" is stored in hidden text box with id = "pointkeeper"
+    // "point" is stored in hidden textbox with id = "pointkeeper"
     const pointKeeper = document.getElementById("pointKeeper");
     const result = document.getElementById("result");
     const bet = document.getElementById("bet");
@@ -79,19 +85,36 @@ function calculate_score(){
     } // end calculate_score
 
 function youLose() {
+    // Update balance textbox and heading.
     balance.value = Number(balance.value) - Number(bet.value);
+    balHeader.innerHTML = "Balance: " + numToCurrency(balance.value);
+    // Reset bet to empty string.
     document.getElementById("bet").value = "";
+    // Reset pointkeeper to 0.
     document.getElementById("pointKeeper").value = 0;
+    // Change image and background color.
     document.getElementById("box").style.backgroundColor = "#f60f09";
     document.getElementById("craps").src = "img/Loser.png";
+    // Display result.
     result.value = "You lose! Bet again.";
 }
 
+// Same comments as above.
 function youWin() {
     balance.value = Number(balance.value) + Number(bet.value);
+    balHeader.innerHTML = "Balance: " + numToCurrency(balance.value);
     document.getElementById("bet").value = "";
     document.getElementById("pointKeeper").value = 0;
     document.getElementById("box").style.backgroundColor = "#79f609";
     document.getElementById("craps").src = "img/Money.png";
     result.value = "You Win! Bet again.";
+}
+
+function numToCurrency(price) {
+    // Format the price to USD, using the locale.
+    let dollarUS = Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+    });
+    return dollarUS.format(price);
 }
